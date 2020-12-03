@@ -1,0 +1,137 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.header {
+    position: relative;
+}
+
+.header canvas {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c24914;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar-toggler {
+    border-color: rgb(255, 255, 255, 0.9) !important;
+    padding: 6px !important;
+    border-radius: 0 !important;
+    outline: none !important;
+}
+
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: rgb(255, 255, 255, 0.9);
+}
+
+.icon-bar:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.sub-heading {
+    font-size: 2rem;
+    display: block;
+}
+
+.main-heading {
+    display: block;
+    font-weight: 400;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.jumbotron .btn {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fefefe;
+}
+
+.btn-contact {
+    background-color: #fecd1a;
+    margin-right: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-contact:hover {
+    background-color: #ddb00d;
+}
+
+.jumbotron .btn svg {
+    font-size: 1.25em;
+}
+
+.group-heading-wrap {
+    display: block;
+    perspective: 1000px;
+}
+
+.group-heading {
+    display: block;
+    transform-style: preserve-3d;
+    height: 4.2rem;
+    line-height: 4.2rem;
+    animation: spin 9s linear infinite;
+}
+
+.top {
+    transform: rotateX(120deg);
+}
+
+.front {
+    transform: rotateX(0);
+}
+
+.bottom {
+    transform: rotateX(-120deg);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0);
+    }
+
+    5% {
+        transform: rotateX(120deg);
+    }
+
+    33.33% {
+        transform: rotateX(120deg);
+    }
+
+    38.33% {
+        transform: rotateX(240deg);
+    }
+
+    66.66% {
+        transform: rotateX(240deg);
+    }
+
+    71.66% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
