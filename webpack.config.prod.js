@@ -35,6 +35,11 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
             {
+                test: /\.js$/,
+                exclude: [path.join(__dirname, "node_modules")],
+                use: ["babel-loader"],
+            },
+            {
                 test: /\.(png|jpe?g|gif|webp|svg|ico)$/,
                 use: [
                     {
@@ -42,6 +47,7 @@ module.exports = {
                         options: {
                             name: "[name].[ext]",
                             outputPath: "images",
+                            publicPath: "images",
                         },
                     },
                 ],

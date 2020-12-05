@@ -33,6 +33,25 @@ module.exports = {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
+            {
+                test: /\.js$/,
+                exclude: [path.join(__dirname, "node_modules")],
+                use: ["babel-loader"],
+            },
+            {
+                test: /\.(png|jpe?g|gif|webp|svg|ico)$/,
+                exclude: [path.join(__dirname, "node_modules")],
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "images",
+                            publicPath: "images",
+                        },
+                    },
+                ],
+            },
         ],
     },
 };

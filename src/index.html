@@ -24,6 +24,12 @@
             type="image/x-icon"
         />
 
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -104,6 +110,11 @@
                                                     class="nav-link"
                                                     href="#track"
                                                     >Nội dung</a
+                                                >
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#fee"
+                                                    >Học phí</a
                                                 >
                                             </li>
                                             <li class="nav-item">
@@ -198,7 +209,7 @@
                                     >
                                     <a
                                         href="https://quiz.techmaster.vn/g3t/21/lo-trinh-dao-tao-java-spring-boot-fullstack-7-thang"
-                                        class="btn btn-lg btn-primary"
+                                        class="btn btn-lg btn-quiz"
                                         target="_blank"
                                         role="button"
                                         ><i class="fas fa-gift"></i> Thi trắc
@@ -222,7 +233,7 @@
             <section class="highlight">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-lg-10">
+                        <div class="col-12">
                             <div class="row">
                                 <div class="col-6 col-lg-3">
                                     <div
@@ -315,7 +326,7 @@
                                         recusandae repellat assumenda placeat?
                                         Error.
                                     </p>
-                                    <a href="#" class="btn btn-lg btn-primary"
+                                    <a href="#" class="btn btn-lg btn-contact"
                                         ><i class="fas fa-download"></i> Nội
                                         dung chi tiết</a
                                     >
@@ -363,96 +374,102 @@
 
                     <div class="section-content different-content">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4 left">
-                                <div class="different-item">
-                                    <div class="different-icon">
-                                        <img
-                                            src="images/1.png"
-                                            alt="Giảng viên"
-                                        />
+                            <div class="col-12 col-md-6 col-xl-4 left">
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
+                                    <div class="different-icon order-lg-1">
+                                        <i
+                                            class="fas fa-user-friends fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
-                                            Giảng viên giỏi, nhiều năm kinh
-                                            nghiệm, kỹ năng giảng dạy tuyệt vời
+                                            Giảng viên giỏi, kỹ năng giảng dạy
+                                            tuyệt vời
                                         </p>
                                     </div>
                                 </div>
-                                <div class="different-item">
-                                    <div class="different-icon">
-                                        <img
-                                            src="images/2.png"
-                                            alt="Bài giảng"
-                                        />
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
+                                    <div class="different-icon order-lg-1">
+                                        <i
+                                            class="fas fa-file-alt fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
-                                            Hệ thống bài giảng trực tuyến, bao
-                                            gồm slide, video và quiz
+                                            Tài liệu trực tuyến, bao gồm slide,
+                                            video và quiz
                                         </p>
                                     </div>
                                 </div>
-                                <div class="different-item">
-                                    <div class="different-icon">
-                                        <img
-                                            src="images/3.png"
-                                            alt="Chứng chỉ"
-                                        />
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
+                                    <div class="different-icon order-lg-1">
+                                        <i
+                                            class="fas fa-certificate fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
-                                            Hướng dẫn học viên luyện thi chứng
-                                            chỉ Java Oracle OCP
+                                            Hướng dẫn luyện thi chứng chỉ Java
+                                            Oracle OCP
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-none d-lg-block col-lg-4">
+                            <div class="d-none d-xl-block col-xl-4">
                                 <img
                                     src="images/intro.jpg"
                                     alt="Sự khác biệt của Techmaster"
                                 />
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="different-item">
+                            <div class="col-12 col-md-6 col-xl-4">
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
                                     <div class="different-icon">
-                                        <img
-                                            src="images/4.png"
-                                            alt="Team work"
-                                        />
+                                        <i
+                                            class="fas fa-running fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
-                                            Tổ chức các cuộc thi lập trình giúp
-                                            sinh viên rèn luyện kỹ năng
+                                            Rèn luyện kỹ năng với các cuộc thi
+                                            lập trình
                                         </p>
                                     </div>
                                 </div>
-                                <div class="different-item">
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
                                     <div class="different-icon">
-                                        <img
-                                            src="images/5.png"
-                                            alt="Kiểm tra"
-                                        />
+                                        <i
+                                            class="fas fa-file-code fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
-                                            Kiểm tra giữa kỳ, đồ án cuối khóa
-                                            đảm bảo chất lượng đào tạo
+                                            Có bài kiểm tra giữa kỳ, đồ án cuối
+                                            khóa
                                         </p>
                                     </div>
                                 </div>
-                                <div class="different-item">
+                                <div
+                                    class="different-item d-flex align-items-start"
+                                >
                                     <div class="different-icon">
-                                        <img
-                                            src="images/6.png"
-                                            alt="Phòng lab"
-                                        />
+                                        <i
+                                            class="fas fa-laptop-house fa-fw fa-2x"
+                                        ></i>
                                     </div>
                                     <div class="different-desc">
                                         <p class="lead">
                                             Phòng lab hiện đại, thời gian học
-                                            thoải mái, có đồ ăn nhẹ, ...
+                                            thoải mái
                                         </p>
                                     </div>
                                 </div>
@@ -467,7 +484,7 @@
             <section class="section data" id="data">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-12 col-lg-10">
+                        <div class="col-12">
                             <div class="data-group">
                                 <div class="row">
                                     <div class="col-6 col-lg-3">
@@ -531,21 +548,13 @@
                     <div class="section-content track-content">
                         <div class="time-line"></div>
                         <div class="row">
-                            <div class="col-12 col-lg-6">
-                                <ul class="track-list left">
+                            <div class="col-12">
+                                <ul class="track-list">
+                                    <!-- Frontend -->
                                     <li class="track-item">
+                                        <img src="images/web.svg" alt="" />
                                         <h3 class="track-title">
-                                            <img
-                                                class="xs"
-                                                src="images/web.svg"
-                                                alt=""
-                                            />
                                             Web Frontend
-                                            <img
-                                                class="lg"
-                                                src="images/web.svg"
-                                                alt=""
-                                            />
                                         </h3>
 
                                         <p>
@@ -579,20 +588,48 @@
                                             tĩnh
                                         </p>
                                     </li>
+
+                                    <!-- JS -->
                                     <li class="track-item">
+                                        <img
+                                            src="images/javascript.svg"
+                                            alt=""
+                                        />
                                         <h3 class="track-title">
-                                            <img
-                                                class="xs"
-                                                src="images/database.svg"
-                                                alt=""
-                                            />
-                                            Databases
-                                            <img
-                                                class="lg"
-                                                src="images/database.svg"
-                                                alt=""
-                                            />
+                                            JavaScript - DOM
                                         </h3>
+                                        <p>
+                                            Làm quen với JavaScript, cách nhúng
+                                            JS vào trang web, cú pháp cơ bản
+                                        </p>
+                                        <p>
+                                            Các cấu trúc điều khiển: if - else,
+                                            switch - case, while - do while, for
+                                        </p>
+                                        <p>
+                                            Hàm, cách khai báo và sử dụng hàm
+                                            trong JavaScript
+                                        </p>
+                                        <p>
+                                            Tìm hiểu về Object, lập trình
+                                            JavaScript OOP
+                                        </p>
+                                        <p>
+                                            Làm quen với DOM, thao tác với HTML,
+                                            thay đổi nội dung trên trang, thay
+                                            đổi CSS, xử lý các sự kiện bằng
+                                            JavaScript
+                                        </p>
+                                        <p>
+                                            Làm quen với ES6, ES7, ... các cú
+                                            pháp mới trong JavaScript
+                                        </p>
+                                    </li>
+
+                                    <!-- Db -->
+                                    <li class="track-item">
+                                        <img src="images/database.svg" alt="" />
+                                        <h3 class="track-title">Databases</h3>
                                         <p>
                                             Giới thiệu, cài đặt môi trường, tạo
                                             dữ liệu mẫu, ...
@@ -626,154 +663,11 @@
                                             JOIN, FULL JOIN
                                         </p>
                                     </li>
+
+                                    <!-- Core -->
                                     <li class="track-item">
-                                        <h3 class="track-title">
-                                            <img
-                                                class="xs"
-                                                src="images/datastructure.svg"
-                                                alt=""
-                                            />
-                                            Data Structure & Algorithm
-                                            <img
-                                                class="lg"
-                                                src="images/datastructure.svg"
-                                                alt=""
-                                            />
-                                        </h3>
-                                        <p>
-                                            Giới thiệu các cấu trúc dữ liệu,
-                                            phân loại và ứng dụng
-                                        </p>
-                                        <p>
-                                            Xử lý mảng: thêm, sửa, xóa, luyện
-                                            tập trên LeetCode
-                                        </p>
-                                        <p>
-                                            Các giải thuật sắp xếp cơ bản:
-                                            Bubble Sort, Insertion Sort,
-                                            Selection Sort
-                                        </p>
-                                        <p>
-                                            Kỹ thuật đệ quy, phân loại, tối ưu
-                                            và khử đệ quy
-                                        </p>
-                                        <p>
-                                            Sắp xếp nâng cao: Quick Sort, Merge
-                                            Sort, ...
-                                        </p>
-                                        <p>
-                                            Tìm hiểu về độ phức tạp của thuật
-                                            toán, đánh giá độ phức tạp, ...
-                                        </p>
-                                        <p>
-                                            Linked List - định nghĩa, đặc điểm,
-                                            ứng dụng và cách triển khai Linked
-                                            List
-                                        </p>
-                                        <p>
-                                            Stack và Queue - định nghĩa, đặc
-                                            điểm, ứng dụng và cách triển khai
-                                        </p>
-                                        <p>
-                                            Hash Table - định nghĩa, cách cài
-                                            đặt hash function, map function và
-                                            cách sử dụng
-                                        </p>
-                                        <p>Thi và chữa bài kiểm tra giữa kỳ</p>
-                                        <p>
-                                            Tìm hiểu về cấu trúc cây - Tree,
-                                            định nghĩa, đặc điểm và ứng dụng
-                                        </p>
-                                        <p>
-                                            Tìm hiểu về cấu trúc đồ thị - Graph,
-                                            định nghĩa, đặc điểm và ứng dụng,
-                                            thuật toán tìm kiếm
-                                        </p>
-                                        <p>Thi cuối kỳ</p>
-                                    </li>
-                                    <li class="track-item">
-                                        <h3 class="track-title">
-                                            <img
-                                                class="xs"
-                                                src="images/docker.svg"
-                                                alt=""
-                                            />
-                                            Docker DepOps
-                                            <img
-                                                class="lg"
-                                                src="images/docker.svg"
-                                                alt=""
-                                            />
-                                        </h3>
-                                        <p>
-                                            Giới thiệu, thiết lập môi trường,
-                                            các lệnh căn bản
-                                        </p>
-                                        <p>
-                                            Docker Hub và Docker private
-                                            registry, đóng gói và triển khai ứng
-                                            dụng Spring Boot + MySQL
-                                        </p>
-                                        <p>
-                                            Viết Dockerfile để đóng gói ứng dụng
-                                            thành Docker Image
-                                        </p>
-                                        <p>
-                                            Tìm hiểu về Docker Swarm, các
-                                            service và task
-                                        </p>
-                                        <p>
-                                            Swarm network, stack, triển khai ứng
-                                            dụng
-                                        </p>
-                                        <p>
-                                            Rolling Update, Health check, Secret
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-12 col-lg-6">
-                                <ul class="track-list right">
-                                    <li class="track-item">
-                                        <h3 class="track-title">
-                                            <img
-                                                src="images/javascript.svg"
-                                                alt=""
-                                            />
-                                            JavaScript - DOM
-                                        </h3>
-                                        <p>
-                                            Làm quen với JavaScript, cách nhúng
-                                            JS vào trang web, cú pháp cơ bản
-                                        </p>
-                                        <p>
-                                            Các cấu trúc điều khiển: if - else,
-                                            switch - case, while - do while, for
-                                        </p>
-                                        <p>
-                                            Hàm, cách khai báo và sử dụng hàm
-                                            trong JavaScript
-                                        </p>
-                                        <p>
-                                            Tìm hiểu về Object, lập trình
-                                            JavaScript OOP
-                                        </p>
-                                        <p>
-                                            Làm quen với DOM, thao tác với HTML,
-                                            thay đổi nội dung trên trang, thay
-                                            đổi CSS, xử lý các sự kiện bằng
-                                            JavaScript
-                                        </p>
-                                        <p>
-                                            Làm quen với ES6, ES7, ... các cú
-                                            pháp mới trong JavaScript
-                                        </p>
-                                    </li>
-                                    <li class="track-item">
-                                        <h3 class="track-title">
-                                            <img src="images/java.svg" alt="" />
-                                            Java Core
-                                        </h3>
+                                        <img src="images/java.svg" alt="" />
+                                        <h3 class="track-title">Java Core</h3>
                                         <p>
                                             Tìm hiểu về ngôn ngữ Java, cài đặt
                                             môi trường, công cụ, viết chương
@@ -851,12 +745,75 @@
                                             JavaCore cuối khóa
                                         </p>
                                     </li>
+
+                                    <!-- Ds -->
                                     <li class="track-item">
+                                        <img
+                                            src="images/datastructure.svg"
+                                            alt=""
+                                        />
                                         <h3 class="track-title">
-                                            <img
-                                                src="images/springboot.svg"
-                                                alt=""
-                                            />
+                                            Data Structure & Algorithm
+                                        </h3>
+                                        <p>
+                                            Giới thiệu các cấu trúc dữ liệu,
+                                            phân loại và ứng dụng
+                                        </p>
+                                        <p>
+                                            Xử lý mảng: thêm, sửa, xóa, luyện
+                                            tập trên LeetCode
+                                        </p>
+                                        <p>
+                                            Các giải thuật sắp xếp cơ bản:
+                                            Bubble Sort, Insertion Sort,
+                                            Selection Sort
+                                        </p>
+                                        <p>
+                                            Kỹ thuật đệ quy, phân loại, tối ưu
+                                            và khử đệ quy
+                                        </p>
+                                        <p>
+                                            Sắp xếp nâng cao: Quick Sort, Merge
+                                            Sort, ...
+                                        </p>
+                                        <p>
+                                            Tìm hiểu về độ phức tạp của thuật
+                                            toán, đánh giá độ phức tạp, ...
+                                        </p>
+                                        <p>
+                                            Linked List - định nghĩa, đặc điểm,
+                                            ứng dụng và cách triển khai Linked
+                                            List
+                                        </p>
+                                        <p>
+                                            Stack và Queue - định nghĩa, đặc
+                                            điểm, ứng dụng và cách triển khai
+                                        </p>
+                                        <p>
+                                            Hash Table - định nghĩa, cách cài
+                                            đặt hash function, map function và
+                                            cách sử dụng
+                                        </p>
+                                        <p>Thi và chữa bài kiểm tra giữa kỳ</p>
+                                        <p>
+                                            Tìm hiểu về cấu trúc cây - Tree,
+                                            định nghĩa, đặc điểm và ứng dụng
+                                        </p>
+                                        <p>
+                                            Tìm hiểu về cấu trúc đồ thị - Graph,
+                                            định nghĩa, đặc điểm và ứng dụng,
+                                            thuật toán tìm kiếm
+                                        </p>
+                                        <p>Thi cuối kỳ</p>
+                                    </li>
+
+                                    <!-- Spring -->
+                                    <li class="track-item">
+                                        <img
+                                            src="images/springboot.svg"
+                                            alt=""
+                                        />
+                                        <h3 class="track-title">
                                             Java Spring Boot
                                         </h3>
                                         <p>
@@ -927,6 +884,38 @@
                                             trang admin, ...
                                         </p>
                                     </li>
+
+                                    <!-- Docker -->
+                                    <li class="track-item">
+                                        <img src="images/docker.svg" alt="" />
+                                        <h3 class="track-title">
+                                            Docker DepOps
+                                        </h3>
+                                        <p>
+                                            Giới thiệu, thiết lập môi trường,
+                                            các lệnh căn bản
+                                        </p>
+                                        <p>
+                                            Docker Hub và Docker private
+                                            registry, đóng gói và triển khai ứng
+                                            dụng Spring Boot + MySQL
+                                        </p>
+                                        <p>
+                                            Viết Dockerfile để đóng gói ứng dụng
+                                            thành Docker Image
+                                        </p>
+                                        <p>
+                                            Tìm hiểu về Docker Swarm, các
+                                            service và task
+                                        </p>
+                                        <p>
+                                            Swarm network, stack, triển khai ứng
+                                            dụng
+                                        </p>
+                                        <p>
+                                            Rolling Update, Health check, Secret
+                                        </p>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -968,7 +957,7 @@
                                                 <div class="action">
                                                     <a
                                                         href="#register"
-                                                        class="btn"
+                                                        class="btn btn-lg"
                                                         >Đăng ký</a
                                                     >
                                                 </div>
@@ -1026,7 +1015,7 @@
                                                 <div class="action">
                                                     <a
                                                         href="#register"
-                                                        class="btn"
+                                                        class="btn btn-lg"
                                                         >Đăng ký</a
                                                     >
                                                 </div>
@@ -1037,79 +1026,81 @@
                             </div>
                         </div>
                     </div>
-                    <div class="faq">
-                        <div class="row">
-                            <div class="col-12 col-lg-4">
-                                <h3 class="content-heading">
-                                    FAQ <i class="fas fa-question"></i>
-                                </h3>
-                                <p class="lead" style="color: #777777">
-                                    Một số câu hỏi thường gặp của học viên
-                                </p>
-                            </div>
-                            <div class="col-12 col-lg-8">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="faq-item">
-                                            <p class="faq-question">
-                                                Techmastercam kết việc làm như
-                                                thế nào?
-                                            </p>
-                                            <p class="faq-answer">
-                                                <strong>Techmaster</strong> liên
-                                                kết với một số công ty và sẽ
-                                                giới thiệu cho học viên tới các
-                                                công ty đó, hoặc công ty sẽ trực
-                                                tiếp tuyển dụng học viên làm
-                                                việc ở vị trí thực tập
-                                            </p>
-                                        </div>
+                </div>
+            </section>
+            <!-- End Fee -->
 
-                                        <div class="faq-item">
-                                            <p class="faq-question">
-                                                Nếu sau một thời gian tôi vẫn
-                                                không xin được việc?
-                                            </p>
-                                            <p class="faq-answer">
-                                                <strong>Techmaster</strong> sẽ
-                                                hoàn trả học phí cộng
-                                                <b>8.000.000đ</b> cho học viên
-                                                nếu sau 6 tháng không xin được
-                                                việc
-                                            </p>
-                                        </div>
+            <!-- FAQ -->
+            <section class="section faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <h3 class="section-heading">
+                                FAQ <i class="fas fa-question"></i>
+                            </h3>
+                            <p>Một số câu hỏi thường gặp của học viên</p>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="faq-item">
+                                        <p class="faq-question">
+                                            Techmastercam kết việc làm như thế
+                                            nào?
+                                        </p>
+                                        <p class="faq-answer">
+                                            <strong>Techmaster</strong> liên kết
+                                            với một số công ty và sẽ giới thiệu
+                                            cho học viên tới các công ty đó,
+                                            hoặc công ty sẽ trực tiếp tuyển dụng
+                                            học viên làm việc ở vị trí thực tập
+                                        </p>
                                     </div>
+                                </div>
 
-                                    <div class="col-12 col-md-6">
-                                        <div class="faq-item">
-                                            <p class="faq-question">
-                                                Tôi có thể rút lại học phí
-                                                không?
-                                            </p>
-                                            <p class="faq-answer">
-                                                Học viên có thể rút lại học phí
-                                                trong 3 buổi học đầu tiên nếu
-                                                cảm thấy không phù hợp hoặc thay
-                                                đổi ý định, ngoài ra, học viên
-                                                cũng có thể bảo lưu để học trong
-                                                thời gian sau
-                                            </p>
-                                        </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="faq-item">
+                                        <p class="faq-question">
+                                            Nếu sau một thời gian tôi vẫn không
+                                            xin được việc?
+                                        </p>
+                                        <p class="faq-answer">
+                                            <strong>Techmaster</strong> sẽ hoàn
+                                            trả học phí cộng
+                                            <b>8.000.000đ</b> cho học viên nếu
+                                            sau 6 tháng không xin được việc
+                                        </p>
+                                    </div>
+                                </div>
 
-                                        <div class="faq-item">
-                                            <p class="faq-question">
-                                                Ngoài thời gian học offline tôi
-                                                có thể đến Techmaster học không?
-                                            </p>
-                                            <p class="faq-answer">
-                                                <strong>Techmaster</strong> có
-                                                rất nhiều phòng học, luôn thoải
-                                                mái thời gian cho học viên có
-                                                thể đến học bất kỳ lúc nào,
-                                                ngoài ra còn có thể trao đổi
-                                                trực tiếp với giảng viên
-                                            </p>
-                                        </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="faq-item">
+                                        <p class="faq-question">
+                                            Tôi có thể rút lại học phí không?
+                                        </p>
+                                        <p class="faq-answer">
+                                            Học viên có thể rút lại học phí
+                                            trong 3 buổi học đầu tiên nếu cảm
+                                            thấy không phù hợp hoặc thay đổi ý
+                                            định, ngoài ra, học viên cũng có thể
+                                            bảo lưu để học trong thời gian sau
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="faq-item">
+                                        <p class="faq-question">
+                                            Ngoài thời gian học offline tôi có
+                                            thể đến Techmaster học không?
+                                        </p>
+                                        <p class="faq-answer">
+                                            <strong>Techmaster</strong> có rất
+                                            nhiều phòng học, luôn thoải mái thời
+                                            gian cho học viên có thể đến học bất
+                                            kỳ lúc nào, ngoài ra còn có thể trao
+                                            đổi trực tiếp với giảng viên
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1117,7 +1108,7 @@
                     </div>
                 </div>
             </section>
-            <!-- End Fee -->
+            <!-- End FAQ -->
 
             <!-- Teacher -->
             <section class="section teacher" id="teacher">
@@ -1130,36 +1121,39 @@
 
                     <div class="section-content teacher-content">
                         <div class="row">
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
                                             alt="giảng viên"
                                         />
+                                        <a
+                                            href="javascript:void(0)"
+                                            class="view-link"
+                                            data-toggle="modal"
+                                            data-target="#teacher-modal"
+                                            data-img="images/intro.jpg"
+                                            data-name="Nguyễn Ba"
+                                            data-info="LoL"
+                                            data-quote="Holyshit"
+                                        >
+                                            <div class="view">
+                                                <i class="fas fa-eye fa-2x"></i>
+                                            </div>
+                                        </a>
                                     </div>
                                     <div class="teacher-info">
                                         <h4 class="teacher-name">Phó TGĐ Ba</h4>
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
-                                            class="teacher-link"
-                                            href="javascript:void(0);"
-                                            data-toggle="modal"
-                                            data-target="#teacher-modal"
-                                            data-img="images/intro.jpg"
-                                            data-name="Nguyễn Xuân Ba"
-                                            data-info="Giảng viên Ba Béo"
-                                            data-quote="Đời là bể khổ, học IT làm cái méo gì"
-                                            >Chi tiết</a
-                                        >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
@@ -1171,20 +1165,12 @@
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
-                                            class="teacher-link"
-                                            href="javascript:void(0);"
-                                            data-toggle="modal"
-                                            data-target="#teacher-modal"
-                                            data-img="images/intro.jpg"
-                                            >Chi tiết</a
-                                        >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
@@ -1196,20 +1182,12 @@
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
-                                            class="teacher-link"
-                                            href="javascript:void(0);"
-                                            data-toggle="modal"
-                                            data-target="#teacher-modal"
-                                            data-img="images/intro.jpg"
-                                            >Chi tiết</a
-                                        >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
@@ -1221,20 +1199,12 @@
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
-                                            class="teacher-link"
-                                            href="javascript:void(0);"
-                                            data-toggle="modal"
-                                            data-target="#teacher-modal"
-                                            data-img="images/intro.jpg"
-                                            >Chi tiết</a
-                                        >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
@@ -1246,20 +1216,12 @@
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
-                                            class="teacher-link"
-                                            href="javascript:void(0);"
-                                            data-toggle="modal"
-                                            data-target="#teacher-modal"
-                                            data-img="images/intro.jpg"
-                                            >Chi tiết</a
-                                        >
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-6 col-md-6 col-xl-4">
-                                <div class="teacher-item d-flex">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
                                     <div class="teacher-thumbnail">
                                         <img
                                             src="images/intro.jpg"
@@ -1271,14 +1233,48 @@
                                         <p class="teacher-desc">
                                             Phó TGĐ Techmaster Việt Nam
                                         </p>
-                                        <a
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
+                                    <div class="teacher-thumbnail">
+                                        <img
+                                            src="images/intro.jpg"
+                                            alt="giảng viên"
+                                        />
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h4 class="teacher-name">Phó TGĐ Ba</h4>
+                                        <p class="teacher-desc">
+                                            Phó TGĐ Techmaster Việt Nam
+                                        </p>
+                                        <!-- <a
                                             class="teacher-link"
                                             href="javascript:void(0);"
                                             data-toggle="modal"
                                             data-target="#teacher-modal"
                                             data-img="images/intro.jpg"
                                             >Chi tiết</a
-                                        >
+                                        > -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <div class="teacher-item">
+                                    <div class="teacher-thumbnail">
+                                        <img
+                                            src="images/intro.jpg"
+                                            alt="giảng viên"
+                                        />
+                                    </div>
+                                    <div class="teacher-info">
+                                        <h4 class="teacher-name">Phó TGĐ Ba</h4>
+                                        <p class="teacher-desc">
+                                            Phó TGĐ Techmaster Việt Nam
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -1507,7 +1503,7 @@
                                                 type="text"
                                                 name="name"
                                                 id="name"
-                                                class="form-control"
+                                                class="form-control form-control-lg"
                                                 required
                                             />
                                             <div class="invalid-feedback">
@@ -1522,7 +1518,7 @@
                                                 type="text"
                                                 name="phone"
                                                 id="phone"
-                                                class="form-control"
+                                                class="form-control form-control-lg"
                                                 required
                                             />
                                             <div class="invalid-feedback">
@@ -1537,7 +1533,7 @@
                                                 type="email"
                                                 name="email"
                                                 id="email"
-                                                class="form-control"
+                                                class="form-control form-control-lg"
                                                 required
                                             />
                                             <div class="invalid-feedback">
@@ -1551,27 +1547,17 @@
                                             <textarea
                                                 name="note"
                                                 id="note"
-                                                rows="5"
-                                                class="form-control"
+                                                class="form-control form-control-lg"
                                             ></textarea>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <button
-                                                id="btn-register"
-                                                type="submit"
-                                                class="btn btn-primary"
-                                            >
-                                                <i class="fas fa-headset"></i>
-                                                Đăng ký tư vấn
-                                            </button>
-                                            <div
-                                                class="alert"
-                                                role="alert"
-                                            ></div>
-                                        </div>
-                                    </div>
+                                    <button
+                                        id="btn-register"
+                                        type="submit"
+                                        class="btn btn-lg btn-contact"
+                                    >
+                                        Đăng ký tư vấn
+                                    </button>
                                 </form>
 
                                 <p class="supporter-title">
@@ -1610,7 +1596,6 @@
 
                             <div class="col-12 col-lg-6">
                                 <div class="address">
-                                    <p>Cơ sở đào tạo</p>
                                     <div class="address-item">
                                         <p class="address-title">
                                             CS1: Techmaster Cơ sở Tố Hữu
@@ -1679,6 +1664,13 @@
             </div>
         </footer>
         <!-- End Footer -->
+
+        <svg width="0" height="0">
+            <radialGradient id="rg" r="150%" cx="0%" cy="90%">
+                <stop stop-color="#ed355b" offset="0" />
+                <stop stop-color="#1f65db" offset="1" />
+            </radialGradient>
+        </svg>
 
         <a class="call-support" href="tel:0382416368"
             ><i class="fas fa-phone"></i
