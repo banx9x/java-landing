@@ -121,6 +121,10 @@ img {
     transition: background-color 0.2s;
 }
 
+.jumbotron .btn {
+    margin-bottom: 1rem;
+}
+
 .btn-quiz {
     border: 1px solid #ffffff;
 }
@@ -609,7 +613,13 @@ img {
 }
 
 .fee-body {
-    padding: 2rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .fee-body {
+        padding: 2rem;
+    }
 }
 
 .fee-item.main {
@@ -761,8 +771,14 @@ img {
 
 .slick-current .review-item {
     opacity: 1;
-    padding: 2rem;
+    padding: 1rem;
     margin-top: -1rem;
+}
+
+@media (min-width: 768px) {
+    .slick-current .review-item {
+        padding: 2rem;
+    }
 }
 
 .review-item svg * {

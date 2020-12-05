@@ -125,7 +125,7 @@ document
 $(".fee-slider").slick({
     arrows: false,
     centerMode: true,
-    centerPadding: "40px",
+    centerPadding: "20px",
     initialSlide: 1,
     mobileFirst: true,
     focusOnSelect: true,
@@ -134,6 +134,7 @@ $(".fee-slider").slick({
             breakpoint: 768,
             settings: {
                 slidesToShow: 1,
+                centerPadding: "60px",
             },
         },
         {
