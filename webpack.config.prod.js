@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,9 +15,14 @@ module.exports = {
         path: path.join(__dirname, "build"),
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+        }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css"
+            filename: "[name].[contenthash].css",
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "index.html"),
@@ -27,6 +33,18 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
+            },
+            {
+                test: /\.(png|jpe?g|gif|webp|svg|ico)$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "[name].[ext]",
+                            outputPath: "images",
+                        },
+                    },
+                ],
             },
         ],
     },
