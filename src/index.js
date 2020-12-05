@@ -125,7 +125,7 @@ document
 $(".fee-slider").slick({
     arrows: false,
     centerMode: true,
-    centerPadding: "20px",
+    centerPadding: "15px",
     initialSlide: 1,
     mobileFirst: true,
     focusOnSelect: true,
@@ -165,7 +165,7 @@ $("#teacher-modal").on("show.bs.modal", function (e) {
 $(".review-slider").slick({
     arrows: false,
     centerMode: true,
-    centerPadding: "30px",
+    centerPadding: "15px",
     infinite: false,
     initialSlide: 1,
     mobileFirst: true,
