@@ -777,7 +777,7 @@ img {
 
 .review-item {
     background-color: #ffffff;
-    opacity: 0.5;
+    opacity: 1;
     border-radius: 8px;
     padding: 1rem;
 }
