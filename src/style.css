@@ -782,6 +782,12 @@ img {
     padding: 1rem;
 }
 
+@media (min-width: 768px) {
+    .review-item {
+        opacity: 0.5;
+    }
+}
+
 .slick-current .review-item {
     opacity: 1;
     padding: 1rem;
