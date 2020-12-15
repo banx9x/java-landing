@@ -9,6 +9,8 @@ import "./style.css";
 import { CountUp } from "countup.js";
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 particlesJS.load("header", "./resources/assets/particlesjs-config.json");
 
@@ -59,65 +61,60 @@ function isScrolling() {
 
 let isToggle = false;
 
-observer.add(
-    "scroll",
-    (() => {
-        const d = document.getElementById("data");
-        const s = new CountUp("student", 300);
-        const p = new CountUp("project", 200);
-        const l = new CountUp("lesson", 90);
-        const v = new CountUp("vote", 5);
+const count = (() => {
+    const d = document.getElementById("data");
+    const s = new CountUp("student", 300);
+    const p = new CountUp("project", 200);
+    const l = new CountUp("lesson", 90);
+    const v = new CountUp("vote", 5);
 
-        const count = () => {
-            if (isShowing(d)) {
-                s.start();
-                p.start();
-                l.start();
-                v.start();
-                observer.remove(count);
+    const count = () => {
+        if (isShowing(d)) {
+            s.start();
+            p.start();
+            l.start();
+            v.start();
+            observer.remove(count);
+        }
+    };
+
+    return count;
+})();
+observer.add("scroll", count);
+
+const navbar = (() => {
+    const n = document.getElementById("navbar");
+
+    return () => {
+        if (isScrolling() && !n.classList.contains("is-fix")) {
+            n.classList.add("is-fix");
+        } else {
+            if (!isToggle && !isScrolling()) {
+                n.classList.remove("is-fix");
             }
-        };
+        }
+    };
+})();
+observer.add("scroll", navbar);
 
-        return count;
-    })()
-);
+const logo = (() => {
+    const l = document.getElementById("logo");
+    let change = false;
 
-observer.add(
-    "scroll",
-    (() => {
-        const n = document.getElementById("navbar");
-
-        return () => {
-            if (isScrolling() && !n.classList.contains("is-fix")) {
-                n.classList.add("is-fix");
-            } else {
-                if (!isToggle && !isScrolling()) {
-                    n.classList.remove("is-fix");
-                }
+    return () => {
+        if (isScrolling()) {
+            if (!change) {
+                change = true;
+                l.src = "/resources/images/logo.png";
             }
-        };
-    })()
-);
+        } else {
+            change = false;
+            l.src = "/resources/images/logo-white.png";
+        }
+    };
+})();
 
-observer.add(
-    "scroll",
-    (() => {
-        const l = document.getElementById("logo");
-        let change = false;
-
-        return () => {
-            if (isScrolling()) {
-                if (!change) {
-                    change = true;
-                    l.src = "/resources/images/logo.png";
-                }
-            } else {
-                change = false;
-                l.src = "/resources/images/logo-white.png";
-            }
-        };
-    })()
-);
+observer.add("scroll", logo);
 
 observer.add(
     "toggle",
@@ -215,17 +212,10 @@ $(".blog-slider").slick({
     mobileFirst: true,
     focusOnSelect: true,
     responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                centerPadding: "90px",
-            },
-        },
+        { breakpoint: 768, settings: { centerPadding: "90px" } },
         {
             breakpoint: 992,
-            settings: {
-                centerPadding: "210px",
-            },
+            settings: { centerPadding: "0px", slidesToShow: 3 },
         },
     ],
 });

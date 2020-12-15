@@ -17,10 +17,7 @@ module.exports = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: [
-                { from: "./src/images", to: "./build/images" },
-                { from: "./src/assets", to: "./build/assets" },
-            ],
+            patterns: [{ from: "./src/resources", to: "resources" }],
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -53,8 +50,8 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: "[name].[ext]",
-                            outputPath: "images",
-                            publicPath: "images",
+                            outputPath: "/resources/images",
+                            publicPath: "/resources/images",
                         },
                     },
                 ],

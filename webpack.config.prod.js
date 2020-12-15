@@ -17,10 +17,7 @@ module.exports = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: [
-                { from: "./src/images", to: "resources/images" },
-                { from: "./src/assets", to: "resources/assets" },
-            ],
+            patterns: [{ from: "./src/resources", to: "resources" }],
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -39,7 +36,11 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
             },
             {
                 test: /\.js$/,
@@ -53,8 +54,8 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: "[name].[ext]",
-                            outputPath: "images",
-                            publicPath: "images",
+                            outputPath: "resources/images",
+                            publicPath: "/resources/images",
                         },
                     },
                 ],
