@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -15,6 +16,12 @@ module.exports = {
         contentBase: path.join(__dirname, "build"),
     },
     plugins: [
+        new CopyPlugin({
+            patterns: [
+                { from: "./src/images", to: "./build/images" },
+                { from: "./src/assets", to: "./build/assets" },
+            ],
+        }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",

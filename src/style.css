@@ -40,7 +40,7 @@ img {
 
 .navbar.is-fix {
     background-color: #ffffff;
-    padding: 1rem;
+    padding: 0;
     box-shadow: 0 0 10px rgb(18, 0, 120, 0.2);
 }
 
@@ -94,7 +94,7 @@ img {
     position: relative;
     background-color: transparent;
     margin-bottom: 0;
-    padding: 10rem 0 10rem;
+    padding: 12rem 0 12rem;
     z-index: 1;
     color: #ffffff;
 }
@@ -104,6 +104,10 @@ img {
     font-weight: 500;
     font-size: 1rem;
     color: #fefefe;
+}
+
+.lead {
+    font-size: 1.2rem;
 }
 
 .btn.btn-lg {
@@ -501,7 +505,9 @@ img {
 /* Track */
 .track {
     background-color: #f3f3f3;
-    background-image: url("bg.png");
+    background-image: url("images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .track-content {
@@ -717,15 +723,21 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 .view svg {
-    color: #ffffff;
+    transform: scale(0);
+    color: #f3f3f3;
+    transition: all 0.2s;
 }
 
 .teacher-thumbnail:hover .view {
     opacity: 1;
+}
+
+.teacher-thumbnail:hover .view svg {
+    transform: scale(1);
 }
 
 .teacher-info {
@@ -754,14 +766,24 @@ img {
 }
 
 .modal-text {
-    padding: 2rem 0;
+    padding: 1rem;
 }
 
-.modal-text .teacher-name {
+@media (min-width: 768px) {
+    .modal-text {
+        padding: 2rem 2rem 2rem 0;
+    }
+}
+
+.modal-content .teacher-name {
     font-size: 1.25rem;
     font-weight: 500;
+    margin-bottom: 0;
 }
 
+.modal-content .teacher-detail {
+    color: #777777;
+}
 /* Review */
 .review {
     background-color: #f3f3f3;
@@ -967,4 +989,121 @@ iframe {
 
 .call-support svg * {
     fill: url(#rg);
+}
+
+/* Blog */
+
+.blog {
+    background-color: #f3f3f3;
+}
+
+.blog .container {
+    overflow-x: hidden;
+}
+
+.blog .slider-item {
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .blog .slider-item {
+        padding: 1rem 2rem;
+    }
+}
+
+.blog-item {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(2, 3, 3, 0.1);
+    transition: all 0.3s;
+    background-color: #ffffff;
+    opacity: 0.5;
+}
+
+.slick-current .blog-item {
+    opacity: 1;
+}
+
+.blog-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 10px rgba(2, 3, 3, 0.2);
+}
+
+.blog .blog-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.blog-time {
+    margin-bottom: 5px;
+    color: #777777;
+}
+
+.blog-title {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.blog-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.blog svg {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.blog-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.blog-thumbnail {
+    width: 40%;
+    flex-shrink: 0;
+    margin-right: 0.5rem;
+}
+
+.blog-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-btn {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blog .more {
+    text-align: center;
+}
+
+.btn.btn-lg.blog-btn {
+    background-color: #ffffff;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+    box-shadow: 0 0 10px rgba(2, 3, 3, 0.1);
+    transition: all 0.2s;
+}
+
+.btn.btn-lg.blog-btn:hover {
+    box-shadow: 0 0 10px rgba(2, 3, 3, 0);
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.btn.btn-lg.blog-btn svg {
+    margin-left: 1rem;
 }

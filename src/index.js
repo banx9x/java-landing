@@ -10,7 +10,7 @@ import { CountUp } from "countup.js";
 import "slick-carousel";
 import "slick-carousel/slick/slick.css";
 
-particlesJS.load("header", "assets/particlesjs-config.json");
+particlesJS.load("header", "./resources/assets/particlesjs-config.json");
 
 const observer = (() => {
     const list = {};
@@ -100,6 +100,26 @@ observer.add(
 );
 
 observer.add(
+    "scroll",
+    (() => {
+        const l = document.getElementById("logo");
+        let change = false;
+
+        return () => {
+            if (isScrolling()) {
+                if (!change) {
+                    change = true;
+                    l.src = "/resources/images/logo.png";
+                }
+            } else {
+                change = false;
+                l.src = "/resources/images/logo-white.png";
+            }
+        };
+    })()
+);
+
+observer.add(
     "toggle",
     (() => {
         const n = document.getElementById("navbar");
@@ -159,10 +179,34 @@ $("#teacher-modal").on("show.bs.modal", function (e) {
     modal.find(".teacher-img img").attr("src", img);
     modal.find(".teacher-name").text(name);
     modal.find(".teacher-detail").text(info);
-    modal.find(".teacher-quote").text('"' + quote + '"');
+    modal.find(".teacher-quote").text(quote);
 });
 
 $(".review-slider").slick({
+    arrows: false,
+    centerMode: true,
+    centerPadding: "15px",
+    infinite: false,
+    initialSlide: 1,
+    mobileFirst: true,
+    focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                centerPadding: "90px",
+            },
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                centerPadding: "210px",
+            },
+        },
+    ],
+});
+
+$(".blog-slider").slick({
     arrows: false,
     centerMode: true,
     centerPadding: "15px",
@@ -193,6 +237,9 @@ document.getElementById("btn-register").addEventListener(
         const phone = document.getElementById("phone");
         const email = document.getElementById("email");
         const note = document.getElementById("note");
+        const success = document.getElementById("success");
+        const error = document.getElementById("error");
+        const msg = document.getElementById("message");
 
         function checkValid() {
             let valid = true;
@@ -247,8 +294,8 @@ document.getElementById("btn-register").addEventListener(
                     Phone: phoneVal,
                     Info: noteVal,
                     Link: window.location.href,
-                    ItemId: "vpb",
-                    Type: 1,
+                    ItemId: "g3t",
+                    Type: 3,
                 };
 
                 let myJSON = JSON.stringify(req);
@@ -265,10 +312,13 @@ document.getElementById("btn-register").addEventListener(
                         name.classList.remove("is-valid");
                         phone.classList.remove("is-valid");
                         email.classList.remove("is-valid");
-                        $(".alert").text(data).alert();
+                        success.style.display = "inline-block";
+                        error.style.display = "none";
                     },
                     error: function (result) {
-                        $(".alert").text(result.responseJSON.message).alert();
+                        success.style.display = "none";
+                        error.style.display = "inline-block";
+                        msg.innerText = result.responseJSON.message;
                     },
                 });
 
