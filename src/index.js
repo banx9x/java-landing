@@ -164,6 +164,16 @@ $(".fee-slider").slick({
     ],
 });
 
+$(".video-slider").slick({
+    arrows: true,
+    mobileFirst: true,
+    focusOnSelect: true,
+    slidesToShow: 1,
+    infinite: false,
+    prevArrow: `<button type="button" class="slick-prev"><i class="fas fa-angle-left"></i></button>`,
+    nextArrow: `<button type="button" class="slick-next"><i class="fas fa-angle-right"></i></button>`,
+});
+
 $("#teacher-modal").on("show.bs.modal", function (e) {
     const a = $(e.relatedTarget);
     const img = a.data("img");

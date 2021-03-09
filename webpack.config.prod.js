@@ -12,7 +12,7 @@ module.exports = {
         index: path.join(__dirname, "src", "index.js"),
     },
     output: {
-        filename: "[name].[contenthash].bundle.js",
+        filename: "resources/js/[name].[contenthash].bundle.js",
         path: path.join(__dirname, "build"),
     },
     plugins: [
@@ -26,7 +26,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css",
+            filename: "resources/css/[name].[contenthash].css",
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "src", "index.html"),

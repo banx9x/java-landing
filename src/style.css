@@ -58,11 +58,11 @@ img {
 }
 
 .navbar .nav-link:hover {
-    color: var(--text-color) !important;
+    color: #1f65db !important;
 }
 
 .is-fix .nav-link.active {
-    color: var(--main-color) !important;
+    color: #1f65db !important;
 }
 
 .is-fix .nav-link {
@@ -70,7 +70,7 @@ img {
 }
 
 .is-fix .nav-link:hover {
-    color: var(--main-color) !important;
+    color: #1f65db !important;
 }
 
 @media (min-width: 992px) {
@@ -81,7 +81,7 @@ img {
         bottom: 0;
         width: 0;
         height: 2px;
-        background-color: var(--main-color);
+        background-color: #1f65db;
         transition: width 0.2s;
     }
 
@@ -103,7 +103,13 @@ img {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1rem;
-    color: #fefefe;
+    color: #1f65db;
+    background-color: #fff;
+}
+
+.jumbotron .btn:hover {
+    background-color: #1f65db;
+    color: #fff;
 }
 
 .lead {
@@ -111,7 +117,7 @@ img {
 }
 
 .btn.btn-lg {
-    border-radius: 25px;
+    border-radius: 5px;
     padding: 0.8rem 1rem;
     transition: all 0.3s;
     font-weight: 600;
@@ -120,7 +126,7 @@ img {
 }
 
 .btn-contact {
-    background-color: var(--main-color);
+    background-color: #1f65db;
     margin-right: 1rem;
     transition: background-color 0.2s;
 }
@@ -135,7 +141,7 @@ img {
 
 .btn-contact:hover {
     background-color: #ffffff;
-    color: var(--main-color);
+    color: #1f65db;
 }
 
 .btn-quiz:hover {
@@ -258,33 +264,32 @@ img {
     box-shadow: 0 0 15px 0 rgba(2, 3, 3, 0.1);
     min-height: 10rem;
     margin-top: -5rem;
-    padding: 2rem 0.5rem;
-    border-radius: 8px;
-}
-
-.highlight-item.has-margin {
-    margin-bottom: calc(5rem + 30px);
+    padding: 1.2rem;
+    border-radius: 5px;
 }
 
 .highlight-icon {
     margin-bottom: 1.5rem;
 }
 
-.highlight-icon svg * {
-    fill: url(#rg);
+.highlight-icon img {
+    width: 60px;
 }
 
 .highlight-content {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 0.9rem;
     font-weight: 600;
     color: #555555;
 }
 
-@media (min-width: 992px) {
-    .highlight-item.has-margin {
-        margin-bottom: 0;
-    }
+.row.about {
+    row-gap: calc(5rem + 30px);
+}
+
+.highlight-content h4 {
+    font-size: 18px;
+    font-weight: 800;
 }
 
 /* About */
@@ -308,9 +313,14 @@ img {
     margin-bottom: 2rem;
 }
 
+.content p {
+    color: #555555;
+}
+
 .content-heading {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -337,6 +347,68 @@ img {
 
 .video:hover .video-thumnail::after {
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.video-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+#document .btn-contact {
+    color: #fff;
+}
+
+#about .btn-contact:hover,
+#document .btn-contact:hover {
+    color: #1f65db;
+}
+
+.video-slider button {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    color: inherit;
+    font-size: 30px;
+    position: absolute;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.video-slider button svg * {
+    fill: url(#rg);
+}
+
+.btn.btn-slide {
+    background-color: transparent !important;
+    color: #ac4b1c !important;
+    border-color: #ac4b1c !important;
+}
+
+.btn.btn-slide:hover {
+    background-color: #ac4b1c !important;
+    color: #fff !important;
+}
+
+.video-slider button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.video-slider button:focus {
+    outline: none;
+}
+
+.video-slider .slick-prev {
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    z-index: 10000;
+}
+
+.video-slider .slick-next {
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    z-index: 10000;
 }
 
 .video-btn {
@@ -431,7 +503,7 @@ img {
     margin-right: 1rem;
     background-color: #ffffff;
     padding: 1rem;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .different-icon svg * {
@@ -455,10 +527,14 @@ img {
 }
 
 /* Data */
+#data {
+    background-image: linear-gradient(293deg, #ed355b 0%, #1f65db 100%);
+}
+
 .data-item {
     background-color: #ffffff;
-    box-shadow: 0 0 15px rgba(2, 3, 3, 0.1);
-    border-radius: 8px;
+    /* box-shadow: 0 0 15px rgba(2, 3, 3, 0.1); */
+    border-radius: 5px;
     min-height: 10rem;
     padding: 1rem 0.5rem;
     display: flex;
@@ -558,8 +634,9 @@ img {
     margin-top: 3rem;
     padding: 1rem 2rem;
     box-shadow: 0 0 15px rgba(2, 3, 3, 0.1);
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .track-item p {
@@ -603,7 +680,7 @@ img {
     background-color: #ffffff;
     box-shadow: 0 0 15px rgb(2, 3, 3, 0.1);
     margin: 0 15px;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -655,16 +732,27 @@ img {
 }
 
 .fee-item .btn {
-    color: #ffffff;
-    background-color: var(--main-color);
+    color: #1f65db;
+    background-color: #fff;
+    border-color: #1f65db;
     text-transform: uppercase;
     padding: 0.8rem 2rem;
     margin-top: 2rem;
 }
 
 .fee-item .btn:hover {
-    color: var(--main-color);
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #1f65db;
+}
+
+.fee-item.main .btn {
+    color: #fff;
+    background-color: #1f65db;
+}
+
+.fee-item.main .btn:hover {
+    color: #1f65db;
+    background-color: #fff;
 }
 
 /* FAQ */
@@ -691,7 +779,7 @@ img {
     padding: 1.5rem;
     /* box-shadow: 0 0 15px rgb(2, 3, 3, 0.1); */
     height: 100%;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .faq-question {
@@ -705,7 +793,7 @@ img {
 
 .teacher-thumbnail {
     position: relative;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -766,7 +854,7 @@ img {
     padding: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .modal-text {
         padding: 2rem 2rem 2rem 0;
     }
@@ -797,7 +885,7 @@ img {
 .review-item {
     background-color: #ffffff;
     opacity: 1;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 1rem;
 }
 
@@ -861,7 +949,7 @@ img {
 .form {
     background-color: #ffffff;
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .form .row {
@@ -870,7 +958,7 @@ img {
 
 .form-control {
     border: 1px solid rgb(2, 3, 3, 0.1);
-    border-radius: 8px;
+    border-radius: 5px;
     resize: none;
 }
 
@@ -888,7 +976,7 @@ img {
 
 iframe {
     border: 0;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
 .address {
@@ -999,7 +1087,7 @@ iframe {
     padding: 1rem;
 }
 .blog-item {
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(2, 3, 3, 0.1);
     transition: all 0.3s;
     background-color: #fff;
